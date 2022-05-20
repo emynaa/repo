@@ -20,7 +20,8 @@ def function(request):
     result= subprocess.run('ansible-playbook','play.yml' ,stdin=subprocess.PIPE,shell=True,stdout=subprocess.PIPE)
     
     out, err = result.communicate()
-    return render (request , 'index.html')
+    print(out)
+    return render (request , 'index')
 
 
 
